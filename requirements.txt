@@ -3,7 +3,10 @@ pymupdf
 sentence-transformers
 faiss-cpu
 langchain
-transformers
+# Pin transformers to a version before v5.0.0
+transformers<5.0.0
+torch
+# (and any other requirements you have, like streamlit)
 torch
 accelerate
 langchain-text-splitters
