@@ -1,0 +1,99 @@
+Architecture:
+    Insurance Policy PDF
+            +
+    Hospital Estimate PDF
+            ↓
+    PDF Text Extraction
+            ↓
+    Chunking
+            ↓
+    Hugging Face Embeddings
+            ↓
+    FAISS Vector Search
+            ↓
+    LLM Response
+            ↓
+    Coverage + Expected Payout + Missing Documents
+
+
+Technology Stack:
+    | Component   | Technology                             |
+    | ----------- | -------------------------------------- |
+    | Frontend    | Streamlit                              |
+    | PDF Parsing | PyMuPDF                                |
+    | Chunking    | LangChain                              |
+    | Embeddings  | sentence-transformers/all-MiniLM-L6-v2 |
+    | Vector DB   | FAISS                                  |
+    | LLM         | Phi-3 Mini Instruct                    |
+    | Deployment  | Hugging Face Spaces                    |
+
+
+Project Structure:
+    insurance-policy/
+    │
+    ├── app.py
+    ├── rag_pipeline.py
+    ├── pdf_processor.py
+    ├── vector_store.py
+    ├── requirements.txt
+    ├── uploaded_files/
+    └── models/
+
+Development Roadmap:
+    Phase 1
+        Streamlit UI
+        PDF upload
+    Phase 2
+        Extract policy text from PDF
+    Phase 3
+        Chunk the document
+    Phase 4
+        Generate embeddings
+    Phase 5
+        Store vectors in FAISS
+    Phase 6
+        Retrieve relevant chunks
+    Phase 7
+        Generate answers using an LLM
+    Phase 8
+        Deploy to Hugging Face Spaces
+
+
+
+Step 1: Create Virtual Environment
+    python -m venv venv
+    Activate it: 
+        source venv/bin/activate
+
+
+Step 2: Create requirements.txt
+    Install dependencies
+        pip install -r requirements.txt
+
+
+Step 3: Create a Minimal Streamlit App
+    To run it:
+        streamlit run app.py
+
+
+Phase 2 — Read the Insurance Policy PDF
+    Step 1: 
+        Create pdf_processor.py
+
+    Step 2: 
+        Chunk the Policy Text:
+            Policy
+                ↓
+            Split into chunks
+                ↓
+            Search relevant chunks
+                ↓
+            Send only relevant chunks to AI
+        
+        Install text splitter
+            pip install langchain-text-splitters
+    
+    Step 3: Generate Embeddings with Hugging Face
+
+    Step 4 — Generate Answers using a Hugging Face LLM
+
