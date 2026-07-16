@@ -29,43 +29,43 @@ if policy_file:
 
     vector_index, embeddings = create_vector_store(chunks)
 
-    st.success(
-        "Embeddings generated successfully"
-    )
+    # st.success(
+    #     "Embeddings generated successfully"
+    # )
 
-    st.write(
-        f"Embedding Dimension: {embeddings.shape[1]}"
-    )
+    # st.write(
+    #     f"Embedding Dimension: {embeddings.shape[1]}"
+    # )
 
-    st.write(
-        f"Total Embeddings: {embeddings.shape[0]}"
-    )
+    # st.write(
+    #     f"Total Embeddings: {embeddings.shape[0]}"
+    # )
 
-    st.write(
-        f"Total Chunks Created: {len(chunks)}"
-    )
+    # st.write(
+    #     f"Total Chunks Created: {len(chunks)}"
+    # )
 
-    st.subheader("First Chunk Preview")
+    # st.subheader("First Chunk Preview")
 
-    st.write(chunks[0][:1000])
+    # st.write(chunks[0][:1000])
 
     st.success("Policy uploaded successfully")
 
-    st.write(
-        f"Pages: {data['pages']}"
-    )
+    # st.write(
+    #     f"Pages: {data['pages']}"
+    # )
 
-    st.write(
-        f"Characters: {len(data['text'])}"
-    )
+    # st.write(
+    #     f"Characters: {len(data['text'])}"
+    # )
 
-    st.subheader(
-        "Preview"
-    )
+    # st.subheader(
+    #     "Preview"
+    # )
 
-    st.text(
-        data["text"][:1000]
-    )
+    # st.text(
+    #     data["text"][:1000]
+    # )
 
 if st.button("Ask AI"):
 
