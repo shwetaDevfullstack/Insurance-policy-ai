@@ -12,10 +12,10 @@ policy_file = st.file_uploader(
     type=["pdf"]
 )
 
-estimate_file = st.file_uploader(
-    "Upload Hospital Estimate PDF (Optional)",
-    type=["pdf"]
-)
+# estimate_file = st.file_uploader(
+#     "Upload Hospital Estimate PDF (Optional)",
+#     type=["pdf"]
+# )
 
 question = st.text_input(
     "Ask a question about your policy"
